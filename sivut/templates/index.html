@@ -1,0 +1,134 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodkit</title>
+    <link rel="stylesheet" href="tyyli/tyyli.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="Foodkit.html">Etusivu</a></li>
+            <li><a href="Reseptit.html">Reseptit</a></li>
+            <li><a href="Yhteystiedot.html">Yhteystiedot</a></li>
+        </ul>
+    </nav>
+<section>
+      <body onload="paivitaKalenteri();">
+
+        <p id="kalenteri">
+            JavaScript ei ole päällä tai jotain muuta meni vikaan.
+        </p>
+        <script>
+          function paivitaKalenteri() {
+              let nyt = new Date();
+              let p = nyt.getDate();
+              let kk = nyt.getMonth() + 1;
+              let y = nyt.getFullYear();
+              let t = nyt.getHours();
+              let m = nyt.getMinutes();
+              let s = nyt.getSeconds();
+      
+              p = muotoile(p);
+              kk = muotoile(kk);
+              t = muotoile(t);
+              m = muotoile(m);
+              s = muotoile(s);
+      
+              document.getElementById("kalenteri").innerHTML =
+                  p + "." + " " + kk + "." + y + " " + t + ":" + m + ":" + s;
+      
+              setTimeout(paivitaKalenteri, 1000);
+          }
+      
+          function muotoile(nyt) {
+              if (nyt < 10) {
+                  nyt = "0" + nyt;
+              }
+              return nyt;
+          }
+      </script>
+      
+      </body>
+</section>
+    
+<main>
+        <h1>FOODKIT</h1>
+        <h2>GO ON, GET YOUR FOODKIT OUT</h2>
+        <h4>Salkun täydeltä reseptejä arkeen ja juhlaan!</h4>
+
+<section>
+  <p>
+    <i>
+      Tervetuloa herkullisten reseptien pariin! Täältä löydät laajan valikoiman maukkaita reseptejä kaikenlaisiin ruokavalioihin ja makuihin. 
+      Resepteistäni löydät herkullisia vinkkejä niin terveellisiin arkiruokiin kuin gourmet-illallisiin. Intohimoni on tehdä ruoanlaitosta 
+      helppoa, hauskaa ja inspiroivaa,ja siksi olen koonnut reseptini  yhteen helppokäyttöiseen sivustoon.Tutustu resepteihin ja kokeile rohkeasti kotona!
+    </i>
+  </p>
+</section>
+    
+</main>  
+
+<hr>
+
+<div>
+  <a style="background-color:steelblue;">
+  <a href="Reseptit.html#1"  style="font-size: 140%; font-family: Arial, Helvetica, sans-serif;" aria-label="Kaalisipulipiirakka">Kaalisipulipiirakka</a>
+  <a href="Reseptit.html#2"  style="font-size: 220%;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" aria-label="Lehtikaali-Lohikeitto">Lehtikaali-Lohikeitto</a>
+  <a href="Reseptit.html#3"  style="font-size: 90%;font-family: Verdana, Geneva, Tahoma, sans-serif;" aria-label="Maa-artisokkalaatikko">Maa-artisokkalaatikko</a> <br>
+  <a href="Reseptit.html#3"  style="font-size: 120%;font-family: Arial, Helvetica, sans-serif;" aria-label="Meksikolainen papupaistos">Meksikolainen papupaistos</a>
+  <a href="Reseptit.html#5"  style="font-size: 170;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" aria-label="Paistettu riisi tofulla">Paistettu riisi tofulla</a><br>
+  <a href="Reseptit.html#6"  style="font-size: 180%;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" aria-label="Paistetut mustajuuret ja fenkoli-kaalicoleslaw">Paistetut mustajuuret ja fenkoli-kaalicoleslaw</a>
+  <a href="Reseptit.html#7" style="font-size: 150%;font-family: Arial, Helvetica, sans-serif;" aria-label="Ruusukaali-jauhelihapata">Ruusukaali-jauhelihapata</a>
+</div> 
+<hr>       
+        
+<section>    
+  <h3> Kiinnostavia ruokablogeja: </h3>
+
+    <div>
+
+      <list>
+               
+            <a href="https://www.hellapoliisi.fi/" target="_blank">Hellapoliisi</a><br>
+              <img src="media/ruoka1.jpg" alt="" width="400" height="200"><br>
+            <a href="https://makuaarkeen.blogspot.com/" target="_blank">Makua arkeen</a><br>
+            <img src="media/ruoka2.jpg" alt="" width="400" height="200"><br>
+            <a href="https://haarukkavatkain.com/" target="_blank">Haarukkavatkain</a><br>
+            <img src="media/ruoka3.jpg" alt="" width="400" height="200"><br>
+            <a href="http://pastanjauhantaa.blogspot.com/" target="_blank">Pastanjauhantaa</a><br>
+            <img src="media/ruoka4.jpg" alt="" width="400" height="200"><br>
+           
+      </list>
+
+    </div>
+    
+</section>
+
+<button class="button"
+    onclick="scrollToTop()">
+    Sivun alkuun
+  
+    <div class="button__horizontal"></div>
+    <div class="button__vertical"></div>
+  
+</button>
+
+
+  <div>
+    <script>
+      function scrollToTop(){
+        window.scrollTo({top : 0, behavior :"smooth"});
+      }
+    </script>    
+  </div>  
+
+</body>
+</html>
+
+
+
